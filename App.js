@@ -21,7 +21,7 @@ class App extends Component {
     }
 
     componentWillUnmount(){
-        document.removeEventListener('keydown', this.handle0nCloseModal);
+        document.removeEventListener('keydown', this.handleOnCloseModal);
     }
 
     //Here we will set state to boolean, true - add modal, false - there is no modal in a DOM
@@ -37,7 +37,7 @@ class App extends Component {
         });
     };
 
-    handle0nCloseModal = (e) => {
+    handleOnCloseModal = (e) => {
         e.stopPropagation();
     };
 
@@ -52,7 +52,7 @@ class App extends Component {
                 <button onClick={this.handleOnOpen}>MODALA</button>
                 <Modal onOpen={this.state.isOpen}
                        onClose={this.handleOnClose}
-                       onCloseModal={this.handle0nCloseModal}>
+                       onCloseModal={this.handleOnCloseModal}>
                     {tekst}
                     {tekst}
                     {tekst}
