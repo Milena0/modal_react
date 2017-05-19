@@ -9,7 +9,7 @@ class Modal extends React.Component {
             return null;
         }
         //backdrop styles
-        const backdrop = {
+        const overlay = {
             backgroundColor: 'rgba(0,0,0,0.6)',
             top: 0,
             bottom: 0,
@@ -32,7 +32,7 @@ class Modal extends React.Component {
         };
 
         return (
-            <div className="backdrop" style={backdrop} onClick={this.props.onClose}>
+            <div className="overlay" style={overlay} onClick={this.props.onClose}>
                 <div tabIndex="0" className="modal" style={modal}
                      onClick={this.props.onCloseModal}>
                     {this.props.children}
