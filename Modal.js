@@ -8,7 +8,7 @@ class Modal extends React.Component {
         if(!this.props.onOpen) {
             return null;
         }
-        //backdrop styles
+        //overlay styles
         const overlay = {
             backgroundColor: 'rgba(0,0,0,0.6)',
             top: 0,
